@@ -23,7 +23,7 @@ rollbar.log('Hello world!')
 app.post('/seed', seed)
 
 app.get('/', function(req,res) {
-    res.sendFile(path.join(__dirname, '../public/index.html'));
+    res.sendFile(path.join(__dirname, '../client/index.html'));
     rollbar.log("Accessed HTML successfully")
 });
 
@@ -43,17 +43,17 @@ app.get('/', function(req,res) {
 // });
 
 app.get('/index.css', function(req, res) {
-    res.sendFile(path.join(__dirname, '../public/index.css'))
+    res.sendFile(path.join(__dirname, '../client/index.css'))
       rollbar.log("Accessed css successfully")
   })
 
 app.get('/main.js', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/main.js'))
+    res.sendFile(path.join(__dirname, '../client/main.js'))
       rollbar.log("Accessed js file successfully")
   })
 
 app.get('/utils.js', (req, res) => {
-  res.sendFile(path.join(__dirname, '../public/utils.js'))
+  res.sendFile(path.join(__dirname, '../client/utils.js'))
     rollbar.log("Accessed js file successfully")
 }) 
 
