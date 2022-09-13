@@ -3,7 +3,7 @@ const express = require("express");
 const cors = require("cors");
 const path = require('path')
 const app = express();
-const {SERVER_PORT} = process.env
+// const {SERVER_PORT} = process.env
 const {seed} = require('./seed.js') 
 
 app.use(cors());
@@ -78,5 +78,6 @@ app.put("/api/painting/:id", updatePainting);
 app.delete("/api/painting/:id", deletePainting); 
 app.get("/api/painting/:id", getPaintingById);
 
+const SERVER_PORT = process.env.PORT || 4000
 
-app.listen(4000, () => console.log("Server running on 4000"));
+app.listen(SERVER_PORT, () => console.log("Server running on 4000"));
