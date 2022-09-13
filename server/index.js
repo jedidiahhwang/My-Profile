@@ -40,7 +40,7 @@ app.get('/mypaintings.html', function(req,res) {
 app.get('/painting.html', function(req,res) {
   res.sendFile(path.join(__dirname, '../client/painting.html'));
      rollbar.log("Accessed HTML successfully")
-// });
+});
 
 app.get('/index.css', function(req, res) {
     res.sendFile(path.join(__dirname, '../client/index.css'))
