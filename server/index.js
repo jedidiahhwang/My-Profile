@@ -28,17 +28,17 @@ app.get('/', function(req,res) {
 });
 
 app.get('/select.html', function(req,res) {
-  res.sendFile(path.join(__dirname, '../public/select.html'));
+  res.sendFile(path.join(__dirname, '../client/select.html'));
      rollbar.log("Accessed HTML successfully")
 });
 
 app.get('/mypaintings.html', function(req,res) {
-  res.sendFile(path.join(__dirname, '../public/myPaintings.html'));
+  res.sendFile(path.join(__dirname, '../client/myPaintings.html'));
     rollbar.log("Accessed HTML successfully")
 });
 
 app.get('/painting.html', function(req,res) {
-  res.sendFile(path.join(__dirname, '../public/painting.html'));
+  res.sendFile(path.join(__dirname, '../client/painting.html'));
      rollbar.log("Accessed HTML successfully")
 // });
 
@@ -59,12 +59,12 @@ app.get('/utils.js', (req, res) => {
 
 
   app.get('/mypaintings.js', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/myPaintings.js'))
+    res.sendFile(path.join(__dirname, '../client/myPaintings.js'))
       rollbar.log("Accessed js file successfully")
   })
 
   app.get('/painting.js', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/painting.js'))
+    res.sendFile(path.join(__dirname, '../client/painting.js'))
       rollbar.log("Accessed js file successfully")
   })
 
